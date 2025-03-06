@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+}
+
+.container_header {
+    display: flex;
+    background-color: red;
+    justify-content: flex-start;
+    height: 100px;
+    width: 100px;
+}
