@@ -2,12 +2,128 @@
 
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.container_header {
+body {
+    height: 100dvh;
+    background-color: #ECECF5;
+}
+
+header {
+    height: 20%;
     display: flex;
-    background-color: red;
-    justify-content: flex-start;
-    height: 100px;
-    width: 100px;
+    justify-content: center;
+    align-items: flex-end;
+    
+
+    & .header-layout {
+        display: flex;
+        justify-content: center;
+        flex-direction: row-reverse;
+
+        & h1 {
+            font-size: 4.9vw;
+            font-family: "itim", cursive;
+            font-weight: 500;
+        }
+
+        & img {
+            width: 80%;
+            margin-right: 10px;
+            position: relative;
+            bottom: 10px;
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    & .search_bar {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+
+        & div {
+            display: flex;
+            justify-content: center;
+            width: 70%;
+            height: 50px;
+
+            & img {
+                position: relative;
+                right: 50px;
+                top: 7px;
+                height: 70%;
+            }
+        }
+    }
+
+    & .products-available {
+        background-color: #B0B0FA;
+        border-radius: 13px;
+        width: 85%;
+        padding: 20px 0px;
+
+            & h2 {
+                color: white;
+                font-size: 1.7vw;
+                font-weight: 500;
+                margin-left: 30px;
+                position: relative;
+                top: 5px;
+            }
+        
+        & #products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            background-color: white;
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #B3B3D8;
+            border-radius: 0px 0px 13px 13px;
+            margin-top: 25px;
+
+            & div {
+                height: 290px;
+                width: 250px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                border: 1px solid black;
+                border-radius: 13px;
+                margin: 10px;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+input {
+    border: 2px solid #B3B3D8; 
+    border-radius: 13px;
+    width: 70vw;
+    height: 50px;
+    padding: 15px;
+}
+
+#input_products:focus {
+    border: 2px solid #0000fa;
+    outline: none;
+}
+
+#input_products::placeholder {
+    color: #B3B3D8;
+}
+
+#input_products {
+    font-size: 23px;
+    color: black;
 }
