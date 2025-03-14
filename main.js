@@ -17,12 +17,35 @@ function displayProducts(products) {
 
     products.forEach(product => {
         const productCard = document.createElement("div")
-        productCard.innerHTML = `
-            <h3>${product.title}</h3>
-            <img src="${product.image}" alt="${product.title}" width="100">
-            <p>R$ ${product.price.toFixed(2)}</p>
-            <a href="product.html?id=${product.id}">Ver detalhes</a>
-        `
+        const productCard_img = document.createElement("div")
+        const info_card = document.createElement("div")
+
+        productCard.classList.add("product-card")
+        productCard_img.classList.add("product-card-img")
+        info_card.classList.add("info_card")
+
+            
+        const img = document.createElement("img")
+        img.src = product.image
+        img.alt = product.title
+        img.width = 100
+        productCard_img.appendChild(img)
+
+        const title = document.createElement("h3")
+        title.textContent = product.title
+
+        const price = document.createElement("p")
+        price.textContent = `R$ ${product.price.toFixed(2)}`
+
+        info_card.appendChild(title)
+        info_card.appendChild(price)
+
+        productCard.appendChild(productCard_img)
+        productCard.appendChild(info_card)
+        
+        productCard.addEventListener("click", () => {
+            window.location.href = `product.html?id=${product.id}`;
+        })
         container.appendChild(productCard)
     })
 }

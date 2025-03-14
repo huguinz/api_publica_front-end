@@ -31,7 +31,7 @@ header {
         }
 
         & img {
-            width: 80%;
+            width: 10vh;
             margin-right: 10px;
             position: relative;
             bottom: 10px;
@@ -68,12 +68,13 @@ main {
         background-color: #B0B0FA;
         border-radius: 13px;
         width: 85%;
-        padding: 20px 0px;
+        padding: 20px 0px 0px;
+        margin-bottom: 5px;
 
             & h2 {
                 color: white;
                 font-size: 1.7vw;
-                font-weight: 500;
+                font-weight: 700;
                 margin-left: 30px;
                 position: relative;
                 top: 5px;
@@ -89,18 +90,55 @@ main {
             padding: 10px;
             border: 2px solid #B3B3D8;
             border-radius: 0px 0px 13px 13px;
-            margin-top: 25px;
+            margin-top: 35px;
 
-            & div {
-                height: 290px;
-                width: 250px;
+            & .product-card {
+                height: 47vh;
+                width: 15vw;
                 display: flex;
                 flex-direction: column;
+                justify-content: space-around;
                 flex-wrap: wrap;
-                border: 1px solid black;
+                border: 2px solid black;
                 border-radius: 13px;
                 margin: 10px;
-                padding: 10px;
+                padding: 15px;
+                cursor: pointer;
+                transition: transform 0.3s ease-in-out;
+
+                    & .product-card-img {
+                        display: flex;
+                        justify-content: center;
+                    }
+
+                    & .info_card {
+                        margin-bottom: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                    }
+
+                & img {
+                    width: 12vh;
+                    height: auto;
+                }
+
+                & h3 {
+                    font-weight: 500;
+                    font-size: 1.3vw;
+                }
+
+
+                & p {
+                    font-size: 2vw;
+                    font-weight: 900;
+                    color: #4394FF;
+                }
+            }
+
+            & .product-card:hover {
+                transform: scale(1.05);
+                border: 8px solid #B0B0FA;
             }
         }
     }
