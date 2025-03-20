@@ -6,7 +6,7 @@ if (productId) {
 		.then((product) => {
 			document.getElementById('product-detail').innerHTML = `
                 <div class='img-product'>
-                    <img src="${product.image}" alt="${product.title}">
+                    <img src="${product.image}" alt="${product.title}" width="200">
                 </div>
                 <div class='description-product'>
                     <div class= 'rate'>
